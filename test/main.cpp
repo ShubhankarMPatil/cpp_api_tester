@@ -8,6 +8,7 @@ using json = nlohmann::json;
 std::string response;
 
 void testGetUserRepositories() {
+    std::string username;
     std::cin >> username;
     response = getUserRepositories(username);
     
@@ -24,7 +25,6 @@ int main() {
     std::cout << "Running GitHub API Tests...\n";
     testGetUserRepositories();
     parseRepositories(response);
-
         // Add more test cases as needed
 
     return 0;
